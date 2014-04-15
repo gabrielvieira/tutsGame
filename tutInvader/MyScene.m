@@ -10,20 +10,26 @@
 
 @implementation MyScene
 
--(id)initWithSize:(CGSize)size {    
+-(id)initWithSize:(CGSize)size {
+    
     if (self = [super initWithSize:size]) {
         /* Setup your scene here */
         
+        self.pode = NO;
         self.backgroundColor = [SKColor colorWithRed:0.15 green:0.15 blue:0.3 alpha:1.0];
         
-        SKLabelNode *myLabel = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
+        self.spriteTut = [SKSpriteNode spriteNodeWithImageNamed:@"tut"];
+        self.spriteTut.size = CGSizeMake(40, 60);
+        self.spriteTut.position = CGPointMake(100, 300);
+        SKAction *action = [SKAction rotateByAngle:(M_PI/2) * (-1) duration:1];
+        [self.spriteTut runAction:action];
         
-        myLabel.text = @"Hello, World!";
-        myLabel.fontSize = 30;
-        myLabel.position = CGPointMake(CGRectGetMidX(self.frame),
-                                       CGRectGetMidY(self.frame));
+        [self addChild:self.spriteTut];
+        self.spriteTut.physicsBody.dynamic = YES;
+        self.spriteTut.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:self.spriteTut.size.width * 0.5];
         
-        [self addChild:myLabel];
+        self.physicsWorld.gravity = CGVectorMake(0.0f, -1.0f);
+
     }
     return self;
 }
@@ -31,22 +37,27 @@
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     /* Called when a touch begins */
     
-    for (UITouch *touch in touches) {
-        CGPoint location = [touch locationInNode:self];
-        
-        SKSpriteNode *sprite = [SKSpriteNode spriteNodeWithImageNamed:@"Spaceship"];
-        
-        sprite.position = location;
-        
-        SKAction *action = [SKAction rotateByAngle:M_PI duration:1];
-        
-        [sprite runAction:[SKAction repeatActionForever:action]];
-        
-        [self addChild:sprite];
-    }
+    UITouch *touch = [[event allTouches] anyObject];
+    CGPoint touchPoint = [touch locationInNode:self] ;
+    
+   
+        if (touchPoint.x > self.size.width /2) {
+           self.pode = YES;
+        }
+}
+
+
+-(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    self.pode = NO;
 }
 
 -(void)update:(CFTimeInterval)currentTime {
+    
+    if (self.pode) {
+         self.spriteTut.position = CGPointMake(self.spriteTut.position.x +2, self.spriteTut.position.y);
+    }
+  
     /* Called before each frame is rendered */
 }
 

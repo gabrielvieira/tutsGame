@@ -25,6 +25,7 @@
 		C0203F2818FDAA590004143A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0203F0018FDAA590004143A /* UIKit.framework */; };
 		C0203F3018FDAA590004143A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C0203F2E18FDAA590004143A /* InfoPlist.strings */; };
 		C0203F3218FDAA590004143A /* tutInvaderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C0203F3118FDAA590004143A /* tutInvaderTests.m */; };
+		C057247318FDAD9600C83273 /* tut.png in Resources */ = {isa = PBXBuildFile; fileRef = C057247218FDAD9600C83273 /* tut.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		C0203F2D18FDAA590004143A /* tutInvaderTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "tutInvaderTests-Info.plist"; sourceTree = "<group>"; };
 		C0203F2F18FDAA590004143A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C0203F3118FDAA590004143A /* tutInvaderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = tutInvaderTests.m; sourceTree = "<group>"; };
+		C057247218FDAD9600C83273 /* tut.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tut.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +135,7 @@
 				C0203F1A18FDAA590004143A /* MyScene.m */,
 				C0203F1C18FDAA590004143A /* Spaceship.png */,
 				C0203F1E18FDAA590004143A /* Images.xcassets */,
+				C057247118FDAD9600C83273 /* images */,
 				C0203F0518FDAA590004143A /* Supporting Files */,
 			);
 			path = tutInvader;
@@ -165,6 +168,14 @@
 				C0203F2E18FDAA590004143A /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C057247118FDAD9600C83273 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				C057247218FDAD9600C83273 /* tut.png */,
+			);
+			path = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,6 +257,7 @@
 				C0203F1D18FDAA590004143A /* Spaceship.png in Resources */,
 				C0203F1F18FDAA590004143A /* Images.xcassets in Resources */,
 				C0203F1518FDAA590004143A /* Main_iPad.storyboard in Resources */,
+				C057247318FDAD9600C83273 /* tut.png in Resources */,
 				C0203F1218FDAA590004143A /* Main_iPhone.storyboard in Resources */,
 				C0203F0918FDAA590004143A /* InfoPlist.strings in Resources */,
 			);
@@ -486,6 +498,7 @@
 				C0203F3718FDAA590004143A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C0203F3818FDAA590004143A /* Build configuration list for PBXNativeTarget "tutInvaderTests" */ = {
 			isa = XCConfigurationList;
@@ -494,6 +507,7 @@
 				C0203F3A18FDAA590004143A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
