@@ -10,6 +10,8 @@
 
 @implementation MyScene
 
+#pragma mark class init
+
 -(id)initWithSize:(CGSize)size {
     
     if (self = [super initWithSize:size]) {
@@ -34,6 +36,8 @@
     return self;
 }
 
+#pragma mark touch events
+
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     /* Called when a touch begins */
     
@@ -51,6 +55,15 @@
 {
     self.pode = NO;
 }
+
+#pragma mark Colision
+
+- (void)didBeginContact:(SKPhysicsContact *)contact
+{
+
+}
+
+#pragma mark Main Game Loop
 
 -(void)update:(CFTimeInterval)currentTime {
     
