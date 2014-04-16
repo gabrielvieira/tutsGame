@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2950A26318FF189800EF7DEC /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 2950A26218FF189800EF7DEC /* background.png */; };
 		C0203EFD18FDAA590004143A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0203EFC18FDAA590004143A /* Foundation.framework */; };
 		C0203EFF18FDAA590004143A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0203EFE18FDAA590004143A /* CoreGraphics.framework */; };
 		C0203F0118FDAA590004143A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0203F0018FDAA590004143A /* UIKit.framework */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2950A26218FF189800EF7DEC /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		C0203EF918FDAA590004143A /* tutInvader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tutInvader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0203EFC18FDAA590004143A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C0203EFE18FDAA590004143A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -125,6 +127,7 @@
 		C0203F0418FDAA590004143A /* tutInvader */ = {
 			isa = PBXGroup;
 			children = (
+				2950A26218FF189800EF7DEC /* background.png */,
 				C0203F0D18FDAA590004143A /* AppDelegate.h */,
 				C0203F0E18FDAA590004143A /* AppDelegate.m */,
 				C0203F1018FDAA590004143A /* Main_iPhone.storyboard */,
@@ -256,6 +259,7 @@
 			files = (
 				C0203F1D18FDAA590004143A /* Spaceship.png in Resources */,
 				C0203F1F18FDAA590004143A /* Images.xcassets in Resources */,
+				2950A26318FF189800EF7DEC /* background.png in Resources */,
 				C0203F1518FDAA590004143A /* Main_iPad.storyboard in Resources */,
 				C057247318FDAD9600C83273 /* tut.png in Resources */,
 				C0203F1218FDAA590004143A /* Main_iPhone.storyboard in Resources */,
