@@ -11,6 +11,8 @@
 		291736C019004E5D005547B0 /* newbg1.png in Resources */ = {isa = PBXBuildFile; fileRef = 291736BE19004E5D005547B0 /* newbg1.png */; };
 		291736C119004E5D005547B0 /* newbg2.png in Resources */ = {isa = PBXBuildFile; fileRef = 291736BF19004E5D005547B0 /* newbg2.png */; };
 		2950A26318FF189800EF7DEC /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 2950A26218FF189800EF7DEC /* background.png */; };
+		299D323E1900702500E11CB6 /* gameFloor.m in Sources */ = {isa = PBXBuildFile; fileRef = 299D323D1900702500E11CB6 /* gameFloor.m */; };
+		299D3241190076F100E11CB6 /* gameTut.m in Sources */ = {isa = PBXBuildFile; fileRef = 299D3240190076F100E11CB6 /* gameTut.m */; };
 		C0203EFD18FDAA590004143A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0203EFC18FDAA590004143A /* Foundation.framework */; };
 		C0203EFF18FDAA590004143A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0203EFE18FDAA590004143A /* CoreGraphics.framework */; };
 		C0203F0118FDAA590004143A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0203F0018FDAA590004143A /* UIKit.framework */; };
@@ -47,6 +49,11 @@
 		291736BE19004E5D005547B0 /* newbg1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = newbg1.png; sourceTree = "<group>"; };
 		291736BF19004E5D005547B0 /* newbg2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = newbg2.png; sourceTree = "<group>"; };
 		2950A26218FF189800EF7DEC /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		299D323C1900702500E11CB6 /* gameFloor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = gameFloor.h; path = ../gameFloor.h; sourceTree = "<group>"; };
+		299D323D1900702500E11CB6 /* gameFloor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = gameFloor.m; path = ../gameFloor.m; sourceTree = "<group>"; };
+		299D323F190076F100E11CB6 /* gameTut.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gameTut.h; sourceTree = "<group>"; };
+		299D3240190076F100E11CB6 /* gameTut.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = gameTut.m; sourceTree = "<group>"; };
+		299D32421900772900E11CB6 /* Define.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Define.h; sourceTree = "<group>"; };
 		C0203EF918FDAA590004143A /* tutInvader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tutInvader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0203EFC18FDAA590004143A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C0203EFE18FDAA590004143A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -139,6 +146,8 @@
 				291736BF19004E5D005547B0 /* newbg2.png */,
 				2950A26218FF189800EF7DEC /* background.png */,
 				C0203F0D18FDAA590004143A /* AppDelegate.h */,
+				299D323C1900702500E11CB6 /* gameFloor.h */,
+				299D323D1900702500E11CB6 /* gameFloor.m */,
 				C0203F0E18FDAA590004143A /* AppDelegate.m */,
 				C0203F1018FDAA590004143A /* Main_iPhone.storyboard */,
 				C0203F1318FDAA590004143A /* Main_iPad.storyboard */,
@@ -146,6 +155,9 @@
 				C0203F1718FDAA590004143A /* ViewController.m */,
 				C0203F1918FDAA590004143A /* gameScene.h */,
 				C0203F1A18FDAA590004143A /* gameScene.m */,
+				299D323F190076F100E11CB6 /* gameTut.h */,
+				299D3240190076F100E11CB6 /* gameTut.m */,
+				299D32421900772900E11CB6 /* Define.h */,
 				C0203F1C18FDAA590004143A /* Spaceship.png */,
 				C057247118FDAD9600C83273 /* images */,
 				C0203F0518FDAA590004143A /* Supporting Files */,
@@ -295,6 +307,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C0203F1B18FDAA590004143A /* gameScene.m in Sources */,
+				299D3241190076F100E11CB6 /* gameTut.m in Sources */,
+				299D323E1900702500E11CB6 /* gameFloor.m in Sources */,
 				C0203F1818FDAA590004143A /* ViewController.m in Sources */,
 				C0203F0F18FDAA590004143A /* AppDelegate.m in Sources */,
 				C0203F0B18FDAA590004143A /* main.m in Sources */,

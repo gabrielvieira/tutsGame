@@ -7,6 +7,8 @@
 //
 
 #import "gameScene.h"
+#import "gameFloor.h"
+#import "gameTut.h"
 
 @implementation gameScene
 
@@ -18,7 +20,7 @@
         /* Setup your scene here */
         self.bg2 = [SKSpriteNode spriteNodeWithImageNamed:@"newbg2"];
         self.bg2.position = CGPointMake(568*2.5, size.width /2);
-         [self addChild:self.bg2];
+        [self addChild:self.bg2];
         
         
         self.bg1 = [SKSpriteNode spriteNodeWithImageNamed:@"newbg1"];
@@ -28,37 +30,22 @@
         self.pode = NO;
         
         
-        self.chao = [[SKSpriteNode alloc]initWithColor:[UIColor yellowColor] size:CGSizeMake(2 * size.height, 1)];
-        self.chao.position = CGPointMake(0, -1);
-        self.chao.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:self.chao.size];
-        self.chao.physicsBody.categoryBitMask = borda;
-        self.chao.physicsBody.dynamic = NO;
+        self.chao = [[gameFloor alloc]initWithSize:CGSizeMake(size.height , 1)];
         [self addChild:self.chao];
-        
         
         
         
         self.aguaFrame = [self loadSpriteSheetFromImageWithName:@"jelly" withNumberOfSprites:12 withNumberOfRows:4 withNumberOfSpritesPerRow:3];
         
         
-        self.spriteTut = [SKSpriteNode spriteNodeWithImageNamed:@"tut"];
         
-       
-        
-        self.spriteTut = [SKSpriteNode spriteNodeWithImageNamed:@"tut"];
-        self.spriteTut.size = CGSizeMake(40, 60);
-        self.spriteTut.position = CGPointMake(50, 160);
+        self.spriteTut = [[gameTut alloc]init];
         SKAction *action = [SKAction rotateByAngle:(M_PI/2) * (-1) duration:1];
         [self.spriteTut runAction:action];
-        self.spriteTut.physicsBody.dynamic = YES;
-        self.spriteTut.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:self.spriteTut.size.width/2];
-        self.spriteTut.physicsBody.categoryBitMask = tartaruga;
-        self.spriteTut.physicsBody.contactTestBitMask = tartaruga | borda ;
-        self.spriteTut.physicsBody.collisionBitMask = tartaruga | borda ;
        
         [self addChild:self.spriteTut];
         SKAction *cu = [SKAction animateWithTextures:self.aguaFrame timePerFrame:0.15f];
-        [self.spriteTut runAction:[SKAction repeatActionForever:cu]];
+        //[self.spriteTut runAction:[SKAction repeatActionForever:cu]];
         self.spriteTut.anchorPoint = CGPointMake(0.5, 0.5);
         
         
@@ -69,8 +56,6 @@
         self.pointsPerSecondSpeed = 70;
         self.podeMoverBg1 = YES;
         self.podeMoverBg2 = NO;
-        
-        
         
     }
     return self;
@@ -114,6 +99,8 @@
         self.pode = NO;
     }
     
+    
+    //varios bg monstro infinito 
     if (self.bg1.position.x <= -270) {
         self.podeMoverBg2 = YES;
     }
@@ -163,13 +150,13 @@
 
 -(void)atirar
 {
-    SKSpriteNode *tiro = [[SKSpriteNode alloc]initWithColor:[UIColor yellowColor] size:CGSizeMake(2, 2)];
+    SKSpriteNode *tiro = [[SKSpriteNode alloc]initWithColor:[UIColor yellowColor] size:CGSizeMake(10, 10)];
     tiro.position = CGPointMake(self.spriteTut.position.x + 30, self.spriteTut.position.y);
     tiro.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:tiro.size];
     
     tiro.physicsBody.dynamic = YES;
     [self addChild:tiro];
-    [tiro.physicsBody applyForce:CGVectorMake(5.0f, 0.0f)];
+    [tiro.physicsBody applyForce:CGVectorMake(70.0f, 0.0f)];
 }
 
 -(NSMutableArray*)loadSpriteSheetFromImageWithName:(NSString*)name withNumberOfSprites:(int)numSprites withNumberOfRows:(int)numRows withNumberOfSpritesPerRow:(int)numSpritesPerRow {
