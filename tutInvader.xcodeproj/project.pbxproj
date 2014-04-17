@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2907EE20190068DB00EC4BA0 /* jelly.png in Resources */ = {isa = PBXBuildFile; fileRef = 2907EE1F190068DB00EC4BA0 /* jelly.png */; };
+		291736C019004E5D005547B0 /* newbg1.png in Resources */ = {isa = PBXBuildFile; fileRef = 291736BE19004E5D005547B0 /* newbg1.png */; };
+		291736C119004E5D005547B0 /* newbg2.png in Resources */ = {isa = PBXBuildFile; fileRef = 291736BF19004E5D005547B0 /* newbg2.png */; };
 		2950A26318FF189800EF7DEC /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 2950A26218FF189800EF7DEC /* background.png */; };
 		C0203EFD18FDAA590004143A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0203EFC18FDAA590004143A /* Foundation.framework */; };
 		C0203EFF18FDAA590004143A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0203EFE18FDAA590004143A /* CoreGraphics.framework */; };
@@ -18,7 +21,7 @@
 		C0203F1218FDAA590004143A /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0203F1018FDAA590004143A /* Main_iPhone.storyboard */; };
 		C0203F1518FDAA590004143A /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0203F1318FDAA590004143A /* Main_iPad.storyboard */; };
 		C0203F1818FDAA590004143A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0203F1718FDAA590004143A /* ViewController.m */; };
-		C0203F1B18FDAA590004143A /* MyScene.m in Sources */ = {isa = PBXBuildFile; fileRef = C0203F1A18FDAA590004143A /* MyScene.m */; };
+		C0203F1B18FDAA590004143A /* gameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = C0203F1A18FDAA590004143A /* gameScene.m */; };
 		C0203F1D18FDAA590004143A /* Spaceship.png in Resources */ = {isa = PBXBuildFile; fileRef = C0203F1C18FDAA590004143A /* Spaceship.png */; };
 		C0203F1F18FDAA590004143A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0203F1E18FDAA590004143A /* Images.xcassets */; };
 		C0203F2618FDAA590004143A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0203F2518FDAA590004143A /* XCTest.framework */; };
@@ -40,6 +43,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2907EE1F190068DB00EC4BA0 /* jelly.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = jelly.png; sourceTree = "<group>"; };
+		291736BE19004E5D005547B0 /* newbg1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = newbg1.png; sourceTree = "<group>"; };
+		291736BF19004E5D005547B0 /* newbg2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = newbg2.png; sourceTree = "<group>"; };
 		2950A26218FF189800EF7DEC /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		C0203EF918FDAA590004143A /* tutInvader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tutInvader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0203EFC18FDAA590004143A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -56,8 +62,8 @@
 		C0203F1418FDAA590004143A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		C0203F1618FDAA590004143A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		C0203F1718FDAA590004143A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		C0203F1918FDAA590004143A /* MyScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyScene.h; sourceTree = "<group>"; };
-		C0203F1A18FDAA590004143A /* MyScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyScene.m; sourceTree = "<group>"; };
+		C0203F1918FDAA590004143A /* gameScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = gameScene.h; sourceTree = "<group>"; };
+		C0203F1A18FDAA590004143A /* gameScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = gameScene.m; sourceTree = "<group>"; };
 		C0203F1C18FDAA590004143A /* Spaceship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Spaceship.png; sourceTree = "<group>"; };
 		C0203F1E18FDAA590004143A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C0203F2418FDAA590004143A /* tutInvaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tutInvaderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -127,6 +133,10 @@
 		C0203F0418FDAA590004143A /* tutInvader */ = {
 			isa = PBXGroup;
 			children = (
+				2907EE1F190068DB00EC4BA0 /* jelly.png */,
+				C0203F1E18FDAA590004143A /* Images.xcassets */,
+				291736BE19004E5D005547B0 /* newbg1.png */,
+				291736BF19004E5D005547B0 /* newbg2.png */,
 				2950A26218FF189800EF7DEC /* background.png */,
 				C0203F0D18FDAA590004143A /* AppDelegate.h */,
 				C0203F0E18FDAA590004143A /* AppDelegate.m */,
@@ -134,10 +144,9 @@
 				C0203F1318FDAA590004143A /* Main_iPad.storyboard */,
 				C0203F1618FDAA590004143A /* ViewController.h */,
 				C0203F1718FDAA590004143A /* ViewController.m */,
-				C0203F1918FDAA590004143A /* MyScene.h */,
-				C0203F1A18FDAA590004143A /* MyScene.m */,
+				C0203F1918FDAA590004143A /* gameScene.h */,
+				C0203F1A18FDAA590004143A /* gameScene.m */,
 				C0203F1C18FDAA590004143A /* Spaceship.png */,
-				C0203F1E18FDAA590004143A /* Images.xcassets */,
 				C057247118FDAD9600C83273 /* images */,
 				C0203F0518FDAA590004143A /* Supporting Files */,
 			);
@@ -257,10 +266,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				291736C119004E5D005547B0 /* newbg2.png in Resources */,
 				C0203F1D18FDAA590004143A /* Spaceship.png in Resources */,
+				291736C019004E5D005547B0 /* newbg1.png in Resources */,
 				C0203F1F18FDAA590004143A /* Images.xcassets in Resources */,
 				2950A26318FF189800EF7DEC /* background.png in Resources */,
 				C0203F1518FDAA590004143A /* Main_iPad.storyboard in Resources */,
+				2907EE20190068DB00EC4BA0 /* jelly.png in Resources */,
 				C057247318FDAD9600C83273 /* tut.png in Resources */,
 				C0203F1218FDAA590004143A /* Main_iPhone.storyboard in Resources */,
 				C0203F0918FDAA590004143A /* InfoPlist.strings in Resources */,
@@ -282,7 +294,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C0203F1B18FDAA590004143A /* MyScene.m in Sources */,
+				C0203F1B18FDAA590004143A /* gameScene.m in Sources */,
 				C0203F1818FDAA590004143A /* ViewController.m in Sources */,
 				C0203F0F18FDAA590004143A /* AppDelegate.m in Sources */,
 				C0203F0B18FDAA590004143A /* main.m in Sources */,
