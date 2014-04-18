@@ -45,7 +45,7 @@
        
         [self addChild:self.spriteTut];
         SKAction *cu = [SKAction animateWithTextures:self.aguaFrame timePerFrame:0.15f];
-        //[self.spriteTut runAction:[SKAction repeatActionForever:cu]];
+        [self.spriteTut runAction:[SKAction repeatActionForever:cu]];
         self.spriteTut.anchorPoint = CGPointMake(0.5, 0.5);
         
         
@@ -95,47 +95,25 @@
     if (self.pode) {
         
         [self atirar];
-
         self.pode = NO;
     }
     
+    [self verificaBackground];
     
-    //varios bg monstro infinito 
-    if (self.bg1.position.x <= -270) {
-        self.podeMoverBg2 = YES;
-    }
-    
-    if ((self.bg2.position.x < 852 && self.bg2.position.x > 840 ) && self.podeMoverBg2 == YES) {
-        self.podeMoverBg1 = NO;
-        self.bg1.position = CGPointMake(568*2.5, 160);
-    }
-    
-    if (self.bg2.position.x <= -270) {
-        self.podeMoverBg1 = YES;
-    }
-    
-    if ((self.bg1.position.x < 852 && self.bg1.position.x > 840 ) && self.podeMoverBg1 == YES) {
-        self.podeMoverBg2 = NO;
-        self.bg2.position = CGPointMake(568*2.5, 160);
-    }
-   
-    
-    
-
     //To compute velocity we need delta time to multiply by points per second
-    if (_lastUpdateTime) {
-        _deltaTime = currentTime - _lastUpdateTime;
-    } else {
-        _deltaTime = 0;
+    if (self.lastUpdateTime)
+    {
+        self.deltaTime = currentTime - self.lastUpdateTime;
     }
-    _lastUpdateTime = currentTime;
+    else
+    {
+        self.deltaTime = 0;
+    }
     
+    self.lastUpdateTime = currentTime;
     
-    
-    CGPoint bgVelocity = CGPointMake(-_pointsPerSecondSpeed, 0.0);
-    CGPoint amtToMove = CGPointMake(bgVelocity.x * _deltaTime, bgVelocity.y * _deltaTime);
-    
-    
+    CGPoint bgVelocity = CGPointMake(-self.pointsPerSecondSpeed, 0.0);
+    CGPoint amtToMove = CGPointMake(bgVelocity.x * self.deltaTime, bgVelocity.y * self.deltaTime);
     
     if (self.podeMoverBg1) {
         self.bg1.position = CGPointMake(self.bg1.position.x+amtToMove.x, self.bg1.position.y);
@@ -144,9 +122,7 @@
     if (self.podeMoverBg2) {
          self.bg2.position = CGPointMake(self.bg2.position.x+amtToMove.x, self.bg2.position.y);
     }
-    
-
-    }
+}
 
 -(void)atirar
 {
@@ -181,6 +157,29 @@
         
     }
     return animationSheet;
+}
+
+-(void)verificaBackground
+{
+    //varios bg monstro infinito
+    if (self.bg1.position.x <= -270) {
+        self.podeMoverBg2 = YES;
+    }
+    
+    if ((self.bg2.position.x < 852 && self.bg2.position.x > 840 ) && self.podeMoverBg2 == YES) {
+        self.podeMoverBg1 = NO;
+        self.bg1.position = CGPointMake(568*2.5, 160);
+    }
+    
+    if (self.bg2.position.x <= -270) {
+        self.podeMoverBg1 = YES;
+    }
+    
+    if ((self.bg1.position.x < 852 && self.bg1.position.x > 840 ) && self.podeMoverBg1 == YES) {
+        self.podeMoverBg2 = NO;
+        self.bg2.position = CGPointMake(568*2.5, 160);
+    }
+
 }
 
 @end
