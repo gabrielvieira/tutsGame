@@ -35,17 +35,19 @@
         
         
         
-        self.aguaFrame = [self loadSpriteSheetFromImageWithName:@"jelly" withNumberOfSprites:12 withNumberOfRows:4 withNumberOfSpritesPerRow:3];
+        self.aguaFrame = [self loadSpriteSheetFromImageWithName:@"jelly" withNumberOfSprites:9 withNumberOfRows:1 withNumberOfSpritesPerRow:9];
         
-        
+        self.tirosFrame = [self alocandoSpriteTiro];
         
         self.spriteTut = [[gameTut alloc]init];
         SKAction *action = [SKAction rotateByAngle:(M_PI/2) * (-1) duration:1];
-        [self.spriteTut runAction:action];
+       [self.spriteTut runAction:action];
        
         [self addChild:self.spriteTut];
-        SKAction *cu = [SKAction animateWithTextures:self.aguaFrame timePerFrame:0.15f];
-        [self.spriteTut runAction:[SKAction repeatActionForever:cu]];
+        
+        
+       // SKAction *cu = [SKAction animateWithTextures:self.aguaFrame timePerFrame:0.2f];
+        //[self.spriteTut runAction:[SKAction repeatActionForever:cu]];
         self.spriteTut.anchorPoint = CGPointMake(0.5, 0.5);
         
         
@@ -126,13 +128,17 @@
 
 -(void)atirar
 {
-    SKSpriteNode *tiro = [[SKSpriteNode alloc]initWithColor:[UIColor yellowColor] size:CGSizeMake(10, 10)];
-    tiro.position = CGPointMake(self.spriteTut.position.x + 30, self.spriteTut.position.y);
+    SKSpriteNode *tiro = [[SKSpriteNode alloc]initWithColor:[UIColor yellowColor] size:CGSizeMake(40, 18)];
+    tiro.position = CGPointMake(self.spriteTut.position.x + 50, self.spriteTut.position.y);
     tiro.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:tiro.size];
+    tiro.physicsBody.density = 0.1f;
     
     tiro.physicsBody.dynamic = YES;
+    SKAction *cu = [SKAction animateWithTextures:self.tirosFrame timePerFrame:0.2f];
+    [tiro runAction:[SKAction repeatActionForever:cu]];
+
     [self addChild:tiro];
-    [tiro.physicsBody applyForce:CGVectorMake(70.0f, 0.0f)];
+    [tiro.physicsBody applyForce:CGVectorMake(15.0f, 0.0f)];
 }
 
 -(NSMutableArray*)loadSpriteSheetFromImageWithName:(NSString*)name withNumberOfSprites:(int)numSprites withNumberOfRows:(int)numRows withNumberOfSpritesPerRow:(int)numSpritesPerRow {
@@ -180,6 +186,13 @@
         self.bg2.position = CGPointMake(568*2.5, 160);
     }
 
+}
+
+-(NSArray *)alocandoSpriteTiro
+{
+    NSArray *s = [NSArray arrayWithObjects:[SKTexture textureWithImageNamed:@"tiro3"],[SKTexture textureWithImageNamed:@"tiro2"],[SKTexture textureWithImageNamed:@"tiro1"], nil];
+
+    return s;
 }
 
 @end

@@ -26,5 +26,6 @@
 @property BOOL podeMoverBg1;
 @property BOOL podeMoverBg2;
 @property NSArray *aguaFrame;
+@property NSArray *tirosFrame;
 
 @end

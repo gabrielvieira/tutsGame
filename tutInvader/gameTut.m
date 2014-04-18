@@ -17,7 +17,7 @@
     self = [super init];
     if (self) {
         self = (gameTut *)[SKSpriteNode spriteNodeWithImageNamed:@"tut"];
-        self.size = CGSizeMake(40, 60);
+        self.size = CGSizeMake(50, 80);
         self.position = CGPointMake(50, 160);
         self.physicsBody.dynamic = YES;
         self.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:self.size.width/2];
