@@ -26,6 +26,7 @@
 @property BOOL podeMoverBg2;
 @property NSArray *aguaFrame;
 @property NSArray *tirosFrame;
+@property NSArray *explosaoFrame;
 @property BOOL podeSubir;
 @property BOOL podeDescer;
 @property SKEmitterNode *FireParticle;

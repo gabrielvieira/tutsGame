@@ -17,6 +17,8 @@
 		299FCF661906E81100AB7C5A /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 299FCF641906E81100AB7C5A /* spark.png */; };
 		299FCF681906E88200AB7C5A /* SnowParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = 299FCF671906E88200AB7C5A /* SnowParticle.sks */; };
 		299FCF6B1907050600AB7C5A /* Timer.m in Sources */ = {isa = PBXBuildFile; fileRef = 299FCF6A1907050600AB7C5A /* Timer.m */; };
+		299FCF6D19070DDB00AB7C5A /* ex.png in Resources */ = {isa = PBXBuildFile; fileRef = 299FCF6C19070DDB00AB7C5A /* ex.png */; };
+		299FCF6F1907108600AB7C5A /* ex1.png in Resources */ = {isa = PBXBuildFile; fileRef = 299FCF6E1907108600AB7C5A /* ex1.png */; };
 		C0203EFD18FDAA590004143A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0203EFC18FDAA590004143A /* Foundation.framework */; };
 		C0203EFF18FDAA590004143A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0203EFE18FDAA590004143A /* CoreGraphics.framework */; };
 		C0203F0118FDAA590004143A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0203F0018FDAA590004143A /* UIKit.framework */; };
@@ -73,6 +75,8 @@
 		299FCF671906E88200AB7C5A /* SnowParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SnowParticle.sks; sourceTree = "<group>"; };
 		299FCF691907050600AB7C5A /* Timer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Timer.h; sourceTree = "<group>"; };
 		299FCF6A1907050600AB7C5A /* Timer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Timer.m; sourceTree = "<group>"; };
+		299FCF6C19070DDB00AB7C5A /* ex.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ex.png; path = tutInvader/ex.png; sourceTree = SOURCE_ROOT; };
+		299FCF6E1907108600AB7C5A /* ex1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ex1.png; path = tutInvader/ex1.png; sourceTree = SOURCE_ROOT; };
 		C0203EF918FDAA590004143A /* tutInvader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tutInvader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0203EFC18FDAA590004143A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C0203EFE18FDAA590004143A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -231,6 +235,8 @@
 		C057247118FDAD9600C83273 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				299FCF6E1907108600AB7C5A /* ex1.png */,
+				299FCF6C19070DDB00AB7C5A /* ex.png */,
 				C0B8E8F51901DC7D006387C6 /* tiros */,
 				C0B8E8F31901D9AD006387C6 /* tiro.png */,
 				C057247218FDAD9600C83273 /* tut.png */,
@@ -333,9 +339,11 @@
 				291736C119004E5D005547B0 /* newbg2.png in Resources */,
 				C0B8E9041901DC7D006387C6 /* tiro6.png in Resources */,
 				C0203F1D18FDAA590004143A /* Spaceship.png in Resources */,
+				299FCF6F1907108600AB7C5A /* ex1.png in Resources */,
 				C0B8E9061901DC7D006387C6 /* tiro8.png in Resources */,
 				C0B8E9021901DC7D006387C6 /* tiro4.png in Resources */,
 				291736C019004E5D005547B0 /* newbg1.png in Resources */,
+				299FCF6D19070DDB00AB7C5A /* ex.png in Resources */,
 				C0203F1F18FDAA590004143A /* Images.xcassets in Resources */,
 				C0B8E9071901DC7D006387C6 /* tiro9.png in Resources */,
 				299FCF651906E81100AB7C5A /* FireParticle.sks in Resources */,

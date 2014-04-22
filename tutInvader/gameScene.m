@@ -41,7 +41,7 @@
         
         
         self.aguaFrame = [self loadSpriteSheetFromImageWithName:@"jelly" withNumberOfSprites:12 withNumberOfRows:4 withNumberOfSpritesPerRow:3];
-        
+        self.explosaoFrame = [self loadSpriteSheetFromImageWithName:@"ex1" withNumberOfSprites:25 withNumberOfRows:5 withNumberOfSpritesPerRow:5];
         self.tirosFrame = [self alocandoSpriteTiro];
         
         
@@ -128,11 +128,29 @@
     
     if ([contact.bodyA.node.name isEqualToString:@"tiro" ]) {
         
+        SKNode *node = contact.bodyA.node;
+        SKSpriteNode *enemy;
+        enemy = [[SKSpriteNode alloc]init];
+        enemy.size = CGSizeMake(50, 50);
+        enemy.position = CGPointMake(node.position.x + 30, node.position.y );
+        SKAction *cu = [SKAction animateWithTextures:self.explosaoFrame timePerFrame:0.05f];
+        [self addChild:enemy];
+        
+        [enemy runAction:[SKAction repeatAction:cu count:1]];
+        
         [contact.bodyA.node removeFromParent];
     }
     
     if ([contact.bodyB.node.name isEqualToString:@"tiro" ]) {
         
+        SKNode *node = contact.bodyB.node;
+        SKSpriteNode *enemy;
+        enemy = [[SKSpriteNode alloc]init];
+        enemy.size = CGSizeMake(50, 50);
+        enemy.position = CGPointMake(node.position.x + 30, node.position.y );
+        SKAction *cu = [SKAction animateWithTextures:self.explosaoFrame timePerFrame:1.0f];
+        [self addChild:enemy];
+        [enemy runAction:[SKAction repeatAction:cu count:1]];
         [contact.bodyB.node removeFromParent];
     }
     
