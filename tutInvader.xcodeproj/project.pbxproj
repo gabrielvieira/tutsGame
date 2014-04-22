@@ -13,6 +13,10 @@
 		2950A26318FF189800EF7DEC /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 2950A26218FF189800EF7DEC /* background.png */; };
 		299D323E1900702500E11CB6 /* gameFloor.m in Sources */ = {isa = PBXBuildFile; fileRef = 299D323D1900702500E11CB6 /* gameFloor.m */; };
 		299D3241190076F100E11CB6 /* gameTut.m in Sources */ = {isa = PBXBuildFile; fileRef = 299D3240190076F100E11CB6 /* gameTut.m */; };
+		299FCF651906E81100AB7C5A /* FireParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = 299FCF631906E81100AB7C5A /* FireParticle.sks */; };
+		299FCF661906E81100AB7C5A /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 299FCF641906E81100AB7C5A /* spark.png */; };
+		299FCF681906E88200AB7C5A /* SnowParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = 299FCF671906E88200AB7C5A /* SnowParticle.sks */; };
+		299FCF6B1907050600AB7C5A /* Timer.m in Sources */ = {isa = PBXBuildFile; fileRef = 299FCF6A1907050600AB7C5A /* Timer.m */; };
 		C0203EFD18FDAA590004143A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0203EFC18FDAA590004143A /* Foundation.framework */; };
 		C0203EFF18FDAA590004143A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0203EFE18FDAA590004143A /* CoreGraphics.framework */; };
 		C0203F0118FDAA590004143A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0203F0018FDAA590004143A /* UIKit.framework */; };
@@ -64,6 +68,11 @@
 		299D323F190076F100E11CB6 /* gameTut.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gameTut.h; sourceTree = "<group>"; };
 		299D3240190076F100E11CB6 /* gameTut.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = gameTut.m; sourceTree = "<group>"; };
 		299D32421900772900E11CB6 /* Define.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Define.h; sourceTree = "<group>"; };
+		299FCF631906E81100AB7C5A /* FireParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = FireParticle.sks; sourceTree = "<group>"; };
+		299FCF641906E81100AB7C5A /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
+		299FCF671906E88200AB7C5A /* SnowParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SnowParticle.sks; sourceTree = "<group>"; };
+		299FCF691907050600AB7C5A /* Timer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Timer.h; sourceTree = "<group>"; };
+		299FCF6A1907050600AB7C5A /* Timer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Timer.m; sourceTree = "<group>"; };
 		C0203EF918FDAA590004143A /* tutInvader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tutInvader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0203EFC18FDAA590004143A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C0203EFE18FDAA590004143A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -173,6 +182,8 @@
 				C0203F1318FDAA590004143A /* Main_iPad.storyboard */,
 				C0203F1618FDAA590004143A /* ViewController.h */,
 				C0203F1718FDAA590004143A /* ViewController.m */,
+				299FCF691907050600AB7C5A /* Timer.h */,
+				299FCF6A1907050600AB7C5A /* Timer.m */,
 				C0203F1918FDAA590004143A /* gameScene.h */,
 				C0203F1A18FDAA590004143A /* gameScene.m */,
 				299D323F190076F100E11CB6 /* gameTut.h */,
@@ -181,6 +192,9 @@
 				C0203F1C18FDAA590004143A /* Spaceship.png */,
 				C057247118FDAD9600C83273 /* images */,
 				C0203F0518FDAA590004143A /* Supporting Files */,
+				299FCF631906E81100AB7C5A /* FireParticle.sks */,
+				299FCF671906E88200AB7C5A /* SnowParticle.sks */,
+				299FCF641906E81100AB7C5A /* spark.png */,
 			);
 			path = tutInvader;
 			sourceTree = "<group>";
@@ -324,8 +338,11 @@
 				291736C019004E5D005547B0 /* newbg1.png in Resources */,
 				C0203F1F18FDAA590004143A /* Images.xcassets in Resources */,
 				C0B8E9071901DC7D006387C6 /* tiro9.png in Resources */,
+				299FCF651906E81100AB7C5A /* FireParticle.sks in Resources */,
 				C0B8E9001901DC7D006387C6 /* tiro2.png in Resources */,
+				299FCF681906E88200AB7C5A /* SnowParticle.sks in Resources */,
 				C0B8E9011901DC7D006387C6 /* tiro3.png in Resources */,
+				299FCF661906E81100AB7C5A /* spark.png in Resources */,
 				2950A26318FF189800EF7DEC /* background.png in Resources */,
 				C0203F1518FDAA590004143A /* Main_iPad.storyboard in Resources */,
 				2907EE20190068DB00EC4BA0 /* jelly.png in Resources */,
@@ -360,6 +377,7 @@
 				C0203F1818FDAA590004143A /* ViewController.m in Sources */,
 				C0203F0F18FDAA590004143A /* AppDelegate.m in Sources */,
 				C0203F0B18FDAA590004143A /* main.m in Sources */,
+				299FCF6B1907050600AB7C5A /* Timer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

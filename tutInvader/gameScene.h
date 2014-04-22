@@ -10,6 +10,7 @@
 
 #import <SpriteKit/SpriteKit.h>
 #import "Define.h"
+#import "Timer.h"
 
 @interface gameScene : SKScene <SKPhysicsContactDelegate>
 
@@ -18,8 +19,6 @@
 @property SKSpriteNode *bg1;
 @property SKSpriteNode *bg2;
 @property BOOL pode;
-@property (nonatomic) NSTimeInterval lastSpawnTimeInterval;
-@property (nonatomic) NSTimeInterval lastUpdateTimeInterval;
 @property NSTimeInterval lastUpdateTime;
 @property NSTimeInterval deltaTime;
 @property float pointsPerSecondSpeed;
@@ -27,5 +26,9 @@
 @property BOOL podeMoverBg2;
 @property NSArray *aguaFrame;
 @property NSArray *tirosFrame;
+@property BOOL podeSubir;
+@property BOOL podeDescer;
+@property SKEmitterNode *FireParticle;
+@property Timer *emenySpawn;
 
 @end
