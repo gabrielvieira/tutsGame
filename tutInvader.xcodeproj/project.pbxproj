@@ -82,7 +82,7 @@
 		C02F1BDF19079C0200C45D21 /* Timer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Timer.m; sourceTree = "<group>"; };
 		C02F1BE119079C0200C45D21 /* Define.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Define.h; sourceTree = "<group>"; };
 		C02F1BE219079C0200C45D21 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		C02F1BE319079C0200C45D21 /* tutInvader-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "tutInvader-Info.plist"; sourceTree = "<group>"; };
+		C02F1BE319079C0200C45D21 /* tutInvader-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "tutInvader-Info.plist"; path = "Other Sources/tutInvader-Info.plist"; sourceTree = "<group>"; };
 		C02F1BE419079C0200C45D21 /* tutInvader-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "tutInvader-Prefix.pch"; sourceTree = "<group>"; };
 		C02F1BE719079C0200C45D21 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		C02F1BE819079C0200C45D21 /* ex.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ex.png; sourceTree = "<group>"; };
@@ -174,6 +174,7 @@
 				C02F1BE519079C0200C45D21 /* Resources */,
 				C0203F1E18FDAA590004143A /* Images.xcassets */,
 				C0203F1018FDAA590004143A /* Main_iPhone.storyboard */,
+				C02F1BE319079C0200C45D21 /* tutInvader-Info.plist */,
 				C0203F1318FDAA590004143A /* Main_iPad.storyboard */,
 				C0203F0518FDAA590004143A /* Supporting Files */,
 			);
@@ -276,7 +277,6 @@
 			children = (
 				C02F1BE119079C0200C45D21 /* Define.h */,
 				C02F1BE219079C0200C45D21 /* main.m */,
-				C02F1BE319079C0200C45D21 /* tutInvader-Info.plist */,
 				C02F1BE419079C0200C45D21 /* tutInvader-Prefix.pch */,
 			);
 			path = "Other Sources";
