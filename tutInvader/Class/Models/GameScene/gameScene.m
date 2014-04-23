@@ -8,7 +8,7 @@
 
 #import "gameScene.h"
 #import "gameFloor.h"
-#import "gameTut.h"
+#import "SpriteTut.h"
 
 @implementation gameScene
 
@@ -46,7 +46,7 @@
         
         
         
-        self.spriteTut = [[gameTut alloc]init];
+        self.spriteTut = [[SpriteTut alloc]init];
         SKAction *action = [SKAction rotateByAngle:(M_PI/2) * (-1) duration:1];
        [self.spriteTut runAction:action];
        
@@ -286,7 +286,7 @@
     enemy.physicsBody.collisionBitMask = tartaruga | borda | tiroAzul;
     
         
-        CGMutablePathRef cgpath = CGPathCreateMutable();
+        //CGMutablePathRef cgpath = CGPathCreateMutable();
         /*
         //random values
         float xStart = [self getRandomNumberBetween:0+enemy.size.width to:self.size.width-enemy.size.width ];
@@ -318,6 +318,8 @@
      [self addChild:enemy];
     
 }
+
+#pragma mark Randon Numbers
 
 - (NSInteger)getRandomNumberBetween:(NSInteger)min to :(NSInteger)max
 {

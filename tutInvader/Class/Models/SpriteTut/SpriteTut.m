@@ -6,10 +6,10 @@
 //  Copyright (c) 2014 Gabriel Vieira. All rights reserved.
 //
 
-#import "gameTut.h"
+#import "SpriteTut.h"
 #import "Define.h"
 
-@implementation gameTut
+@implementation SpriteTut
 
 -(id)init
 {
@@ -17,7 +17,7 @@
     self = [super init];
     if (self) {
         
-        self = (gameTut *)[SKSpriteNode spriteNodeWithImageNamed:@"tut"];
+        self = (SpriteTut *)[SKSpriteNode spriteNodeWithImageNamed:@"tut"];
         self.size = CGSizeMake(50, 80);
         self.position = CGPointMake(150, 160);
         self.physicsBody.dynamic = YES;

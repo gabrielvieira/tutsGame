@@ -8,6 +8,6 @@
 
 #import <SpriteKit/SpriteKit.h>
 
-@interface gameTut : SKSpriteNode
+@interface SpriteTut : SKSpriteNode
 
 @end
