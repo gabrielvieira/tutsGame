@@ -91,7 +91,6 @@
     UITouch *touch = [[event allTouches] anyObject];
     CGPoint touchPoint = [touch locationInNode:self] ;
     
-   
     if (touchPoint.x > self.size.width /2) {
         self.pode = YES;
     }
@@ -103,8 +102,6 @@
     if (touchPoint.x < self.size.width/2 && touchPoint.y > self.size.height/2) {
         self.podeSubir = YES;
     }
-    
-   
 }
 
 
@@ -113,8 +110,6 @@
     self.pode = NO;
     self.podeDescer = NO;
     self.podeSubir = NO;
-
-    NSLog(@"cabou");
 }
 
 #pragma mark Colision
@@ -247,29 +242,7 @@
     [tiro.physicsBody applyForce:CGVectorMake(25.0f, 0.0f)];
 }
 
--(NSMutableArray*)loadSpriteSheetFromImageWithName:(NSString*)name withNumberOfSprites:(int)numSprites withNumberOfRows:(int)numRows withNumberOfSpritesPerRow:(int)numSpritesPerRow {
-    
-    NSMutableArray* animationSheet = [NSMutableArray array];
-    
-    SKTexture* mainTexture = [SKTexture textureWithImageNamed:name];
-    
-    for(int j = numRows-1; j >= 0; j--) {
-        for(int i = 0; i < numSpritesPerRow; i++) {
-            
-            SKTexture* part = [SKTexture textureWithRect:CGRectMake(i*(1.0f/numSpritesPerRow), j*(1.0f/numRows), 1.0f/numSpritesPerRow, 1.0f/numRows) inTexture:mainTexture];
-            
-            [animationSheet addObject:part];
-            
-            if(animationSheet.count == numSprites)
-                break;
-        }
-        
-        if(animationSheet.count == numSprites)
-            break;
-        
-    }
-    return animationSheet;
-}
+
 
 -(void)verificaBackground
 {
@@ -341,7 +314,7 @@
     [enemy runAction:[SKAction sequence:@[planeDestroy,remove]]];
     
     */
-    enemy.position = CGPointMake(450 , 160  );
+    enemy.position = CGPointMake(450 , 160);
      [self addChild:enemy];
     
 }
@@ -351,11 +324,37 @@
     return min + arc4random() % (max - min + 1);
 }
 
+#pragma mark Alocando Sprites
+
 -(NSArray *)alocandoSpriteTiro
 {
     NSArray *s = [NSArray arrayWithObjects:[SKTexture textureWithImageNamed:@"tiro3"],[SKTexture textureWithImageNamed:@"tiro2"],[SKTexture textureWithImageNamed:@"tiro1"], nil];
 
     return s;
+}
+
+-(NSMutableArray*)loadSpriteSheetFromImageWithName:(NSString*)name withNumberOfSprites:(int)numSprites withNumberOfRows:(int)numRows withNumberOfSpritesPerRow:(int)numSpritesPerRow {
+    
+    NSMutableArray* animationSheet = [NSMutableArray array];
+    
+    SKTexture* mainTexture = [SKTexture textureWithImageNamed:name];
+    
+    for(int j = numRows-1; j >= 0; j--) {
+        for(int i = 0; i < numSpritesPerRow; i++) {
+            
+            SKTexture* part = [SKTexture textureWithRect:CGRectMake(i*(1.0f/numSpritesPerRow), j*(1.0f/numRows), 1.0f/numSpritesPerRow, 1.0f/numRows) inTexture:mainTexture];
+            
+            [animationSheet addObject:part];
+            
+            if(animationSheet.count == numSprites)
+                break;
+        }
+        
+        if(animationSheet.count == numSprites)
+            break;
+        
+    }
+    return animationSheet;
 }
 
 @end
